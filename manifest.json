@@ -13,14 +13,6 @@
     "content_scripts": [
         {
             "matches": [
-                "https://*.instructure.com/*"
-            ],
-            "js": [
-                "scripts/enableFixedLeftNav.js"
-            ]
-        },
-        {
-            "matches": [
                 "https://*.instructure.com/accounts/*"
             ],
             "js": [
@@ -32,7 +24,8 @@
                 "https://*.instructure.com/courses/*"
             ],
             "js": [
-                "scripts/breadcrumbs.js"
+                "scripts/breadcrumbs.js",
+                "scripts/enableFixedLeftNav.js"
             ]
         },
         {
