@@ -25,7 +25,7 @@
             ],
             "js": [
                 "scripts/breadcrumbs.js",
-                "scripts/enableFixedLeftNav.js"
+                "scripts/enableFixedLeftCourseNav.js"
             ]
         },
         {
