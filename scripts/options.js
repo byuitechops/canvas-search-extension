@@ -19,12 +19,12 @@ function saveOptions() {
     var sectionsColumn = document.querySelector('#sectionsColumn').checked;
     var sectionsBreadcrumb = document.querySelector('#sectionsBreadcrumb').checked;
     var navToModules = document.querySelector('#navToModules').checked;
-    var fixedLeftNav = document.querySelector('#fixedLeftNav').checked;
+    var fixedLeftCourseNav = document.querySelector('#fixedLeftCourseNav').checked;
     chrome.storage.sync.set({
         sectionsColumn,
         sectionsBreadcrumb,
         navToModules,
-        fixedLeftNav
+        fixedLeftCourseNav
     }, function () {
         console.log('Options saved');
     });
@@ -36,12 +36,12 @@ function getOptions() {
         sectionsColumn: false,
         sectionsBreadcrumb: false,
         navToModules: false,
-        fixedLeftNav: false,
+        fixedLeftCourseNav: false,
     }, function (items) {
         document.querySelector('#sectionsColumn').checked = items.sectionsColumn;
         document.querySelector('#sectionsBreadcrumb').checked = items.sectionsBreadcrumb;
         document.querySelector('#navToModules').checked = items.navToModules;
-        document.querySelector('#fixedLeftNav').checked = items.fixedLeftNav;
+        document.querySelector('#fixedLeftCourseNav').checked = items.fixedLeftNav;
         document.querySelectorAll('.switch>input').forEach(colorItem);
     });
 }
